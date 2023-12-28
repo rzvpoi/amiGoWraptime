@@ -101,6 +101,7 @@ To get a local copy up and running follow these simple example steps.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -123,3 +124,15 @@ Project Link: [https://github.com/rzvpoi/amiGoWraptime](https://github.com/rzvpo
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+[contributors-shield]: https://img.shields.io/github/contributors/rzvpoi/amiGoWraptime.svg?style=for-the-badge
+[contributors-url]: https://github.com/rzvpoi/amiGoWraptime/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/rzvpoi/amiGoWraptime.svg?style=for-the-badge
+[forks-url]: https://github.com/rzvpoi/amiGoWraptime/network/members
+[stars-shield]: https://img.shields.io/github/stars/rzvpoi/amiGoWraptime.svg?style=for-the-badge
+[stars-url]: https://github.com/rzvpoi/amiGoWraptime/stargazers
+[issues-shield]: https://img.shields.io/github/issues/rzvpoi/amiGoWraptime.svg?style=for-the-badge
+[issues-url]: https://github.com/rzvpoi/amiGoWraptime/issues
+[license-shield]: https://img.shields.io/github/license/rzvpoi/amiGoWraptime.svg?style=for-the-badge
+[license-url]: https://github.com/rzvpoi/amiGoWraptime/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://ro.linkedin.com/in/razvan-poienariu
