@@ -34,7 +34,7 @@ func main() {
 
 	a.Connect()
 
-	queues := strings.Split(os.Getenv("QUEUES"), ",")
+	queues := strings.Split(os.Getenv("QUEUESgive"), ",")
 	fmt.Println(queues)
 
 	// Listen for connection events
