@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"os"
 	"strings"
@@ -13,12 +12,7 @@ import (
 
 // // Creating hanlder functions
 func AgentCompleteHandler(a *amigo.Amigo, agentsQueue map[string]int64, m map[string]string) {
-	fmt.Printf("AgentComplete event received: %v\n", m)
 	go addAgentToPause(a, agentsQueue, m["MemberName"], m["Queue"], int64(time.Now().Unix()))
-}
-
-func DefaultHandler(m map[string]string) {
-	fmt.Printf("Event received: %v\n", m)
 }
 
 func main() {
@@ -31,10 +25,13 @@ func main() {
 	defer logfile.Close()
 	log.SetOutput(logfile)
 
-	err = godotenv.Load(".env")
+	if _, err := os.Stat("/.dockerenv"); err != nil {
+		// if not running in docker cotainer read from .env file
+		err = godotenv.Load(".env")
 
-	if err != nil {
-		log.Fatalf("Error loading .env file")
+		if err != nil {
+			log.Fatalf("Error loading .env file")
+		}
 	}
 
 	agentsQueue := make(map[string]int64)

@@ -93,14 +93,57 @@ The application was built with Go and uses the [amigo](https://pkg.go.dev/github
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+AmiGoWraptime can be run either in a docker container or locally on a machine. 
+<br><br>
+Before starting with the installation process make sure that the server where the app will be installed can connect to the AMI instance.
 
 ### Installation
 
+#### Run it with Docker
+1. Download the Docker image
+```bash
+docker pull trp8818/goamiwraptime:latest
+```
+2. Run the image. Change the env variables for you case
+```bash
+docker run -d \
+  --name goamiwraptime \
+  -e AMI_HOST="localhost" \
+  -e AMI_USERNAME="admin" \
+  -e AMI_PASSWORD="password" \
+  -e QUEUES="300,500" \
+  trp8818/goamiwraptime:latest
+```
+#### Run it locally on a machine
+1. You need to download the right executable from the releases page
+The latest version right now is [v1.0.0](https://github.com/rzvpoi/amiGoWraptime/releases/tag/v1.0.0)
+For linux and macos you can run the following command:
+```bash
+curl -O https://github.com/rzvpoi/amiGoWraptime/releases/download/v1.0.0/gowraptime_linux_v1.0.0_amd64
+``` 
+For windows powershell:
+```powershell
+Invoke-WebRequest -Uri "https://github.com/rzvpoi/amiGoWraptime/releases/download/v1.0.0/gowraptime_windows_v1.0.0_x64.exe" -OutFile "gowraptime_windows_v1.0.0_x64.exe"
+```
+
+2. After the download finishes you need to create an .env file with the following text
+```vim
+AMI_HOST = 'localhost'
+AMI_USERNAME = 'admin'
+AMI_PASSWORD = 'password'
+QUEUES = "300,500" 
+WRAPTIME = "30"
+```
+* QUEUES: You can write one or more queues depending from which queue you want agents to be put in pause
+* WRAPTIME: this variable is in seconds and the default value is 30 seconds.
+
+3. After this you can start the app and watch it work.
+
 <!-- USAGE EXAMPLES -->
 ## Usage
-
+This application is designed to automatically pause agents in the queue for a predefined wrap-time, eliminating the need for manual intervention.
+<br>
+It is particularly effective when integrated with an autodialer or predictive dialer system.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

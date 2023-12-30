@@ -35,13 +35,16 @@ func addAgentToPause(a *amigo.Amigo, agentsQueue map[string]int64, memberName st
 	// extract the extension from Member Name (ex: 300 Fname Lname)
 	exten := memberName[:3]
 
-	err := godotenv.Load(".env")
+	if _, err := os.Stat("/.dockerenv"); err != nil {
+		// if not running in docker cotainer read from .env file
+		err = godotenv.Load(".env")
 
-	if err != nil {
-		log.Fatalf("Error loading .env file")
+		if err != nil {
+			log.Fatalf("Error loading .env file")
+		}
 	}
+
 	allowedQueues := strings.Split(os.Getenv("QUEUES"), ",")
-	fmt.Println(allowedQueues)
 	var isQueueAllowed bool = false
 	for _, allowedQueue := range allowedQueues {
 		if strings.Compare(queue, allowedQueue) == 0 {
@@ -61,7 +64,7 @@ func addAgentToPause(a *amigo.Amigo, agentsQueue map[string]int64, memberName st
 	if a.Connected() {
 		result, err := a.Action(map[string]string{
 			"Action":    "QueuePause",
-			"Interface": fmt.Sprintf("Local/%s@from-queue/n", "300"),
+			"Interface": fmt.Sprintf("Local/%s@from-queue/n", exten),
 			"Paused":    "true",
 			"Reason":    "Wraptime pause",
 			"ActionID":  "pause",
@@ -88,7 +91,7 @@ func removeAgentFromPause(a *amigo.Amigo, agentsQueue map[string]int64, exten st
 	if a.Connected() {
 		result, err := a.Action(map[string]string{
 			"Action":    "QueuePause",
-			"Interface": fmt.Sprintf("Local/%s@from-queue/n", "300"),
+			"Interface": fmt.Sprintf("Local/%s@from-queue/n", exten),
 			"Paused":    "false",
 			"Reason":    "Wraptime unpause",
 			"ActionID":  "unpause",
