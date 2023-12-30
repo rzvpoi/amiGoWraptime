@@ -83,7 +83,7 @@ By implementing this solution, the application aims to enhance overall call cent
 
 ## Built with Go
 
-The application was built with Go and uses the [amigo](https://pkg.go.dev/github.com/ivahaev/amigo) package to connec to Asterisk AMI
+The application was built with Go and uses the [amigo](https://pkg.go.dev/github.com/ivahaev/amigo) package to connect to Asterisk AMI
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
