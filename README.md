@@ -70,9 +70,6 @@
   </ol>
 </details>
 
-## ⚠️ Warning
-This project is currently under active development and is not considered a finished product. While it aims to optimize Asterisk Wrap-up Time, certain features may be incomplete or subject to changes.
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
