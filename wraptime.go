@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strconv"
 	"strings"
 	"sync"
 	"time"
@@ -15,9 +16,13 @@ import (
 var wg sync.WaitGroup
 
 func checkAgentsStatus(a *amigo.Amigo, agentsQueue map[string]int64) {
+	wraptime, err := strconv.Atoi(os.Getenv("WRAPTIME"))
+	if err != nil {
+		log.Panicln("Error:", err)
+	}
 	for {
 		for agent, pause_time := range agentsQueue {
-			if time.Now().Unix()-pause_time > 30 {
+			if time.Now().Unix()-pause_time > int64(wraptime) {
 				removeAgentFromPause(a, agentsQueue, agent)
 			}
 

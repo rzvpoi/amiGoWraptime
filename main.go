@@ -22,20 +22,30 @@ func DefaultHandler(m map[string]string) {
 }
 
 func main() {
-	err := godotenv.Load(".env")
+	logfile, err := os.Create("amigowraptime.log")
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	defer logfile.Close()
+	log.SetOutput(logfile)
+
+	err = godotenv.Load(".env")
 
 	if err != nil {
 		log.Fatalf("Error loading .env file")
 	}
+
 	agentsQueue := make(map[string]int64)
 
+	log.Print("AmigoWraptime INIT")
 	settings := &amigo.Settings{Username: os.Getenv("AMI_USERNAME"), Password: os.Getenv("AMI_PASSWORD"), Host: os.Getenv("AMI_HOST")}
 	a := amigo.New(settings)
 
 	a.Connect()
 
 	queues := strings.Split(os.Getenv("QUEUESgive"), ",")
-	fmt.Println(queues)
 
 	// Listen for connection events
 	a.On("connect", func(message string) {
@@ -43,7 +53,7 @@ func main() {
 		unPauseAllAgents(a, queues)
 	})
 	a.On("error", func(message string) {
-		fmt.Println("Connection error:", message)
+		log.Println("Connection error:", message)
 	})
 
 	// Registering handler function for event "DeviceStateChange"
@@ -53,7 +63,7 @@ func main() {
 
 	a.RegisterHandler("AsyncEvent", func(m map[string]string) {
 		// Process the asynchronous response here
-		fmt.Println("Received AsyncEvent:", m)
+		log.Println("Received AsyncEvent:", m)
 	})
 
 	// goroutine for checking agents status in queue
