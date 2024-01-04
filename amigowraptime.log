@@ -1,0 +1,57 @@
+2024/01/04 11:15:26 AmigoWraptime INIT
+2024/01/04 11:15:26 Connected Asterisk Call Manager/2.8.0
+2024/01/04 11:15:29 Agent 915 Desideriu Gecse added to pause for 30 seconds
+2024/01/04 11:16:00 Agent 915 removed from pause
+2024/01/04 11:16:21 Queue is not allowed!
+2024/01/04 11:16:55 Agent 915 Desideriu Gecse added to pause for 30 seconds
+2024/01/04 11:16:58 Agent 938 Petr Laf added to pause for 30 seconds
+2024/01/04 11:17:26 Agent 915 removed from pause
+2024/01/04 11:17:29 Agent 938 removed from pause
+2024/01/04 11:17:48 Agent 915 Desideriu Gecse added to pause for 30 seconds
+2024/01/04 11:18:19 Agent 915 removed from pause
+2024/01/04 11:18:59 Queue is not allowed!
+2024/01/04 11:19:44 Agent 938 Petr Laf added to pause for 30 seconds
+2024/01/04 11:20:15 Agent 938 removed from pause
+2024/01/04 11:20:34 Agent 915 Desideriu Gecse added to pause for 30 seconds
+2024/01/04 11:21:05 Agent 915 removed from pause
+2024/01/04 11:24:15 Agent 942 Erik Steffan added to pause for 30 seconds
+2024/01/04 11:24:17 Agent 938 Petr Laf added to pause for 30 seconds
+2024/01/04 11:24:46 Agent 942 removed from pause
+2024/01/04 11:24:48 Agent 938 removed from pause
+2024/01/04 11:25:05 Agent 915 Desideriu Gecse added to pause for 30 seconds
+2024/01/04 11:25:25 Agent 942 Erik Steffan added to pause for 30 seconds
+2024/01/04 11:25:32 Queue is not allowed!
+2024/01/04 11:25:36 Agent 915 removed from pause
+2024/01/04 11:25:38 Agent 938 Petr Laf added to pause for 30 seconds
+2024/01/04 11:25:56 Agent 942 removed from pause
+2024/01/04 11:26:09 Agent 938 removed from pause
+2024/01/04 11:26:35 Agent 915 Desideriu Gecse added to pause for 30 seconds
+2024/01/04 11:27:06 Agent 915 removed from pause
+2024/01/04 11:27:08 Queue is not allowed!
+2024/01/04 11:27:36 Agent 942 Erik Steffan added to pause for 30 seconds
+2024/01/04 11:27:48 Queue is not allowed!
+2024/01/04 11:28:07 Agent 942 removed from pause
+2024/01/04 11:59:24 Connection error: AMI TCP ERROR: read tcp 10.25.16.226:49721->10.25.7.101:5038: read: connection reset by peer
+2024/01/04 12:09:05 Connected Asterisk Call Manager/2.8.0
+2024/01/04 12:10:32 Queue is not allowed!
+2024/01/04 12:12:49 Queue is not allowed!
+2024/01/04 12:14:09 Queue is not allowed!
+2024/01/04 12:17:57 Queue is not allowed!
+2024/01/04 12:25:02 Queue is not allowed!
+2024/01/04 12:27:58 Queue is not allowed!
+2024/01/04 12:33:10 Queue is not allowed!
+2024/01/04 12:37:35 Queue is not allowed!
+2024/01/04 12:39:50 Queue is not allowed!
+2024/01/04 12:41:10 Queue is not allowed!
+2024/01/04 12:42:17 Queue is not allowed!
+2024/01/04 12:46:04 Queue is not allowed!
+2024/01/04 12:46:44 Queue is not allowed!
+2024/01/04 12:50:11 Queue is not allowed!
+2024/01/04 12:50:22 Queue is not allowed!
+2024/01/04 12:51:46 Queue is not allowed!
+2024/01/04 12:53:27 Queue is not allowed!
+2024/01/04 13:00:51 Queue is not allowed!
+2024/01/04 13:03:28 Queue is not allowed!
+2024/01/04 13:04:41 Queue is not allowed!
+2024/01/04 13:10:09 Queue is not allowed!
+2024/01/04 13:12:33 Queue is not allowed!

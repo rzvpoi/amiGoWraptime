@@ -111,19 +111,15 @@ docker run -d \
   -e QUEUES="300,500" \
   trp8818/goamiwraptime:latest
 ```
-#### Run it locally on a machine
+#### Run it locally on a machine on linux
 1. You need to download the right executable from the releases page
 The latest version right now is [v1.0.0](https://github.com/rzvpoi/amiGoWraptime/releases/tag/v1.0.0)
-For linux and macos you can run the following command:
-```bash
-curl -O https://github.com/rzvpoi/amiGoWraptime/releases/download/v1.0.0/gowraptime_linux_v1.0.0_amd64
-``` 
-For windows powershell:
-```powershell
-Invoke-WebRequest -Uri "https://github.com/rzvpoi/amiGoWraptime/releases/download/v1.0.0/gowraptime_windows_v1.0.0_x64.exe" -OutFile "gowraptime_windows_v1.0.0_x64.exe"
-```
 
-2. After the download finishes you need to create an .env file with the following text
+```bash
+wget -O amigowraptime https://github.com/rzvpoi/amiGoWraptime/releases/download/v1.0.0/gowraptime_linux_x64
+``` 
+
+2. After the download finishes you create an .env file in the same directory as the executable with the following text:
 ```vim
 AMI_HOST = 'localhost'
 AMI_USERNAME = 'admin'
@@ -134,7 +130,15 @@ WRAPTIME = "30"
 * QUEUES: You can write one or more queues depending from which queue you want agents to be put in pause
 * WRAPTIME: this variable is in seconds and the default value is 30 seconds.
 
-3. After this you can start the app and watch it work.
+3. Add execution rights to the amigowraptime file
+```bash
+chmod +x amigowraptime
+```
+
+4. Run the file
+```
+./amigowraptime &
+```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
